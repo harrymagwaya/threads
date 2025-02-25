@@ -1,6 +1,6 @@
 package threads;
 
-
+// threads first example
 class seqExec{
     public static void main(String[] args) {
        
