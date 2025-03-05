@@ -4,7 +4,7 @@ public class lockWithCustomObj {
     private static int count1 = 0;
     private static int count2 = 0;
 
-    private static Object lock1 = new Object();
+    private static Object lock1 = new Object(); //  private is done to prevent exposure of lock obj
     private static Object lock2 = new Object();
 
     public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class lockWithCustomObj {
     }
 
     private static void increment1(){
-
+        // helps lock the threads so that no other thread has access to resource untill one thread is done suing it
         synchronized(lock1){
             count1++;
         }
